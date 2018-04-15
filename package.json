@@ -1,0 +1,23 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "class assignment",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdolla/bamazon.git"
+  },
+  "author": "jdolla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdolla/bamazon/issues"
+  },
+  "homepage": "https://github.com/jdolla/bamazon#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "mysql": "^2.15.0"
+  }
+}
