@@ -10,8 +10,8 @@ Dependencies:
 * inquirer": "^5.2.0
 * mysql": "^2.15.0
 
-##Successful Purchase
+## Successful Purchase
 ![Screenshot 001](/screen001.png)
 
-##Failed Purchase
+## Failed Purchase
 ![Screenshot 001](/screen002.png)
