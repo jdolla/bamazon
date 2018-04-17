@@ -16,7 +16,7 @@ showInventory = async function(){
   db.close();
 
   let table = new Table({
-    head: ['ID', 'Product Name', 'Price'],
+    head: ['\x1b[33mID', '\x1b[33mProduct Name', '\x1b[33mPrice'],
     colWidths:[4, 45, 15]
   });
 
