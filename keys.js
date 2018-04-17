@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: "../secrets/.env"
+  path: "./secrets/.env"
 });
 
 exports.mysql = {

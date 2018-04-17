@@ -2,9 +2,7 @@ var Inventory = require('./Inventory');
 var inquirer = require('inquirer');
 
 var isInt = function (val) {
-  if (parseInt(val)) {
-    return true;
-  }
+  return (parseInt(val)) ? true : false;
 }
 
 var collectOrder = function () {
@@ -15,13 +13,13 @@ var collectOrder = function () {
           name: 'id',
           message: 'What product would you like to purchase?',
           type: 'input',
-          validte: isInt
+          validate: isInt
         },
         {
           name: 'qty',
           message: 'How many would you like?',
           type: 'input',
-          validte: isInt
+          validate: isInt
         }
       ])
         .then((answers) => {
