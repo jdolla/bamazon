@@ -23,7 +23,6 @@ getRoleId = function (roleName) {
     });
 
   return roleId.then((data) => {
-    db.close();
     return data;
   })
 
@@ -60,8 +59,6 @@ createUser = async function (username, password, roleName) {
         console.log(err);
         break;
     }
-  } finally {
-    db.close();
   }
 
   return user;
@@ -91,8 +88,6 @@ getUser = async function ( username, password ){
     };
   } catch (error) {
     console.log(error);
-  } finally {
-    db.close();
   }
 
   return result;
@@ -104,3 +99,5 @@ module.exports = {
   createUser: createUser,
   getUer: getUser
 }
+
+// getRoleId('admin').then( x => {console.log(x)})

@@ -19,13 +19,15 @@ class MySqlDatabase {
       database: database
     };
 
-    this.connection = mysql.createConnection(this.config);
   }
 
   query(sql, args){
     //runs a query and returns a promise containing the results.
     return new Promise( (resolve, reject) => {
-      this.connection.query(sql, args, (err, rows, cols) => {
+
+      const connection = mysql.createConnection(this.config);
+      connection.query(sql, args, (err, rows, cols) => {
+        connection.end();
         if(err){
           // console.log(err);
           return reject({
@@ -36,18 +38,6 @@ class MySqlDatabase {
         resolve({rows, cols});
       });
     });
-  }
-
-  close(){
-    return new Promise( (resolve, reject) => {
-      this.connection.end( err => {
-        if(err){
-          console.log(err);
-          return reject(err);
-        }
-        resolve();
-      });
-    })
   }
 }
 

@@ -13,7 +13,6 @@ showInventory = async function(){
   `;
 
   const inventory = await db.query(inventoryQuery);
-  db.close();
 
   let table = new Table({
     head: ['\x1b[33mID', '\x1b[33mProduct Name', '\x1b[33mPrice'],
@@ -48,7 +47,6 @@ getProduct = async function(productId){
 
 
   let product = await db.query(productQuery, [productId]);
-  db.close();
 
   return {
     id: product.rows[0].productId,
@@ -69,7 +67,6 @@ reduceStock = async function(productId, quantity){
   `;
 
   db.query(reduceQuery, [quantity, productId]);
-  db.close();
 }
 
 
